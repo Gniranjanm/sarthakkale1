@@ -404,16 +404,13 @@ async def cb_handler(client: Client, query: CallbackQuery):
         await query.answer()
     elif query.data == "start":
         buttons = [[
-            InlineKeyboardButton('➕ 𝘾𝙡𝙞𝙘𝙠 𝙝𝙚𝙧𝙚 𝙏𝙤 𝘼𝙙𝙙 𝙈𝙚 𝙄𝙣 𝙔𝙤𝙪𝙧 𝙂𝙧𝙤𝙪𝙥 ➕', url=f'http://t.me/{temp.U_NAME}?startgroup=true')
+            InlineKeyboardButton('➕ Add Me To Your Groups ➕', url=f'http://t.me/{temp.U_NAME}?startgroup=true')
         ], [
-            InlineKeyboardButton('🔍 ꜱᴇᴀʀᴄʜ 🔍', switch_inline_query_current_chat=''),
-            InlineKeyboardButton('💸 ʙᴜʏ ᴘʀᴇᴍɪᴜᴍ 💸',url='https://t.me/rb1official')
+            InlineKeyboardButton('🔍 Search', switch_inline_query_current_chat=''),
+            InlineKeyboardButton('🏹 Source', url='https://github.com/sarthakkale16')
         ], [
-            InlineKeyboardButton('💲 Ｈｅｌｐ 💲', callback_data='help'),
-            InlineKeyboardButton('🏹 ᴀʙᴏᴜᴛ ᴍᴇ 🏹', callback_data='about')
-        ], [
-            InlineKeyboardButton('ᴏꜰꜰɪᴄɪᴀʟ ɢʀᴏᴜᴘ',url='https://t.me/+EpnHCopIWPs5OTdl'),
-            InlineKeyboardButton('ʙᴀᴄᴋᴜᴘ ɢʀᴏᴜᴘ',url='https://t.me/+-g8IZGK3UMdiNWNl')
+            InlineKeyboardButton('ℹ️ Help', callback_data='help'),
+            InlineKeyboardButton('😊 About', callback_data='about')
         ]]
         reply_markup = InlineKeyboardMarkup(buttons)
         await query.message.edit_text(
@@ -441,11 +438,8 @@ async def cb_handler(client: Client, query: CallbackQuery):
         )
     elif query.data == "about":
         buttons = [[
-            InlineKeyboardButton('✌️ Group Updates ✌️', url='https://t.me/requestbox1official'),
+            InlineKeyboardButton('✌️ Source ✌️', url='https://github.com/sarthakkale16/aadicode2'),
             InlineKeyboardButton('🌸 Devs Of Bot 🌸', callback_data='source')
-        ], [
-            InlineKeyboardButton('🔒 ᴜᴘᴅᴀᴛᴇꜱ 1', url='https://t.me/requestbox1official'),
-            InlineKeyboardButton('🔔 ᴜᴘᴅᴀᴛᴇꜱ 2', url='https://t.me/rb1official')
         ], [
             InlineKeyboardButton('🏠 Home', callback_data='start'),
             InlineKeyboardButton('🔐 Close', callback_data='close_data')
